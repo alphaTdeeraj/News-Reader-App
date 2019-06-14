@@ -45,6 +45,7 @@ const newsBody = (articles) => {
 
 const getNews = (category = 'technology', country = 'in') => {
     let news = []
+<<<<<<< HEAD
     axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=yourkey`)
         .then(res => newsBody(res.data['articles']))
         .catch(err => console.log(err.data))
@@ -52,4 +53,15 @@ const getNews = (category = 'technology', country = 'in') => {
 
 
 //calling the news functio for getting the news and injecting it to the document
+=======
+    axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=yourapikey2688`)
+        .then(res => {
+            news = res.data['articles']
+            console.log(res.data['totalResults'])
+            console.log(news[1])
+        })
+        .catch(err => console.log(err.data))
+}
+
+>>>>>>> 262794d199d667e2f660e608d66ab103e57d03a7
 getNews()
