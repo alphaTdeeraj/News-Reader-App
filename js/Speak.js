@@ -27,7 +27,7 @@ const speak = (text) => {
 
 const getNews = (category = 'technology', country = 'in') => {
     let news = []
-    axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=c4c5dff1c1974cdf99af8269058a2688`)
+    axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=yourapikey2688`)
         .then(res => {
             news = res.data['articles']
             console.log(res.data['totalResults'])
